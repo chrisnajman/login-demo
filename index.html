@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo login across multiple pages. Special content displayed once logged-in">
+    <title>Home | Login Demo</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./js/index.js" type="module"></script>
+</head>
+
+<body>
+    <a href="#main-content" class="element-invisible element-focusable skip-link">Skip to main content</a>
+    <div class="theme-toggler">
+        <p class="light">Light<span class="visually-hidden"> theme inactive</span></p><button type="button"
+            aria-pressed="true" aria-label="Toggle theme"><span></span></button>
+        <p class="dark">Dark<span class="visually-hidden"> theme active</span></p>
+    </div>
+    <header class="header">
+        <div class="title">
+            <p class="h1">Login Demo</p>
+            <svg height="32px" width="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true">
+
+                <g>
+                    <path
+                        d="M458.047,168.92H172.669v-30.031c0-46.055,37.475-83.53,83.53-83.53c42.534,0,77.749,31.969,82.869,73.15
+		h55.621C389.369,56.758,329.289,0,256.199,0c-76.58,0-138.889,62.308-138.889,138.889v30.031H53.953
+		c-22.718,0-40.801,19.029-39.644,41.717l14.394,263.691C29.78,495.438,47.21,512,68.347,512h375.306
+		c21.137,0,38.567-16.562,39.644-37.672l14.395-263.691C498.849,187.949,480.765,168.92,458.047,168.92z M276.618,341.82v57.459
+		c0,9.893-8.095,17.988-17.988,17.988c-9.894,0-17.989-8.096-17.989-17.988V341.82c-11.579-6.383-19.517-18.561-19.517-32.717
+		c0-20.713,16.792-37.506,37.506-37.506c20.713,0,37.505,16.793,37.505,37.506C296.135,323.26,288.197,335.438,276.618,341.82z" />
+                </g>
+            </svg>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="./index.html" aria-current="page">Home (Log in)</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="user-message" id="user-message"></p>
+    </header>
+    <main class="main" id="main-content">
+        <h1>Home</h1>
+        <div class="home-row">
+            <section class="flow">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <div><label for="username">Username</label><input type="text" name="username" id="username"
+                            required>
+                    </div>
+                    <div><label for="password">Password</label><input type="password" name="password" id="password"
+                            required>
+                    </div>
+                    <div><button>Login</button></div>
+
+                </form>
+                <p id="form-message" class="form-message warning"></p>
+            </section>
+            <section class="flow">
+                <h2>Test Logins</h2>
+
+                <table>
+                    <tr>
+                        <th>Username</th>
+                        <th>Password</th>
+                    </tr>
+                    <tr>
+                        <td>Jim</td>
+                        <td>123456</td>
+                    </tr>
+                    <tr>
+                        <td>Jane</td>
+                        <td>abcdef</td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>654321</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Bad username/password</th>
+                    </tr>
+                    <tr>
+                        <td>Vlad</td>
+                        <td>666</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+        <section class="container flow">
+            <h2>Extra Content (Requires Login)</h2>
+            <p class="logged-in-content" id="logged-in-content-home"></p>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <a href="https://github.com/chrisnajman/login-demo" target="_blank" rel="noopener noreferrer">
+            Git Repository
+        </a>
+    </footer>
+</body>
+
+</html>

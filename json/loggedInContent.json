@@ -1,0 +1,17 @@
+[
+    {
+        "id": "homePage",
+        "content": "This is logged-in <b>Home</b> page extra content."
+
+    },
+    {
+        "id": "aboutPage",
+        "content": "This is logged-in <b>About</b> page extra content."
+
+    },
+    {
+        "id": "contactPage",
+        "content": "This is logged-in <b>Contact</b> page extra content."
+
+    }
+]
