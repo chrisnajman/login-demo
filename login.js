@@ -1,6 +1,6 @@
 export default function login() {
-  const LOGINS = "../json/logins.json"
-  const LOGGED_IN_CONTENT = "../json/loggedInContent.json"
+  const LOGINS = "./logins.json"
+  const LOGGED_IN_CONTENT = "./loggedInContent.json"
 
   const loginForm = document.getElementById("login-form")
   const formMessage = document.getElementById("form-message")
