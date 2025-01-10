@@ -64,9 +64,10 @@ export default function login() {
       )
 
       if (matchedLogin) {
-        // Get userMessage, loggedInContentHome directly from JSON.
+        // Get userMessage, populate loggedInContentHome directly from JSON.
         userMessage.textContent = `User: ${matchedLogin.username}`
-        loggedInContentHome.innerHTML = loggedInContent[0].content
+
+        populateContent(loggedInContentHome, loggedInContent, 0)
 
         // Apply class here (and at end of script)
         loggedInContentBox.classList.add("border")
@@ -86,19 +87,17 @@ export default function login() {
     // Get userMessage and loggedInContent[...] from session storage
     userMessage.textContent = `User: ${retrievedLogin.username}`
 
-    if (loggedInContentHome) {
-      loggedInContentHome.innerHTML = retrievedContent[0].content
-    }
-
-    if (loggedInContentAbout) {
-      loggedInContentAbout.innerHTML = retrievedContent[1].content
-    }
-
-    if (loggedInContentContact) {
-      loggedInContentContact.innerHTML = retrievedContent[2].content
-    }
+    populateContent(loggedInContentHome, retrievedContent, 0)
+    populateContent(loggedInContentAbout, retrievedContent, 1)
+    populateContent(loggedInContentContact, retrievedContent, 2)
 
     // Apply border style again
     loggedInContentBox.classList.add("border")
+  }
+}
+
+function populateContent(targetElement, contentData, contentIndex) {
+  if (targetElement) {
+    targetElement.innerHTML = contentData[contentIndex].content
   }
 }

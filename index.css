@@ -203,12 +203,13 @@ button {
 }
 
 .warning {
-    background: black;
-    color: white;
-    width: fit-content;
     margin-inline: auto;
     padding: 0.1875rem 0.5rem;
     text-align: center;
+    text-wrap: pretty;
+    max-width: 25ch;
+    border: 0.125rem dashed var(--fg);
+    border-radius: var(--border-radius);
 }
 
 .home-row {
