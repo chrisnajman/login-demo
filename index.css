@@ -285,7 +285,7 @@ table {
     padding: 1.25rem;
 
     &.border {
-        border: 0.1875rem solid black;
+        border: 3px solid var(--fg);
         border-radius: var(--border-radius);
     }
 }
