@@ -52,12 +52,15 @@
             <h1>About</h1>
 
             <p>This project demonstrates a simple login system using <strong>session storage</strong> to persist user
-                data and dynamically load custom content across multiple pages. Login credentials and custom page
+                data<strong>*</strong> and dynamically load custom content across multiple pages. Login credentials and
+                custom page
                 content are stored in JSON files and fetched during runtime. The application is built with vanilla ES6
                 JavaScript (no frameworks). For further details please consult the <a
                     href="https://github.com/chrisnajman/login-demo" target="_blank" rel="noopener noreferrer">
                     Git Repository
                 </a></p>
+            <p><strong>*</strong> The user is automatically logged out when the browser window or tab is closed, as the
+                session data is not persisted beyond the session.</p>
         </section>
 
         <section class="container flow">
