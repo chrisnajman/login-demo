@@ -1,5 +1,5 @@
 export default function themeSwitcher() {
-  const LOCAL_STORAGE_PREFIX = "COOKIE_CUTTER"
+  const LOCAL_STORAGE_PREFIX = "LOGIN_DEMO"
   const THEME_KEY = `${LOCAL_STORAGE_PREFIX}-theme`
 
   const themeToggler = document.querySelector(".theme-toggler")
